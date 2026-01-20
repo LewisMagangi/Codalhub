@@ -17,7 +17,7 @@
     "https://api.github.com/*"
   ],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "src/background.js"
   },
   "content_scripts": [
     {
@@ -28,12 +28,12 @@
         "https://www.codechef.com/problems/*",
         "https://www.codewars.com/kata/*"
       ],
-      "js": ["content.js"],
-      "css": ["styles.css"]
+      "js": ["src/content.js"],
+      "css": ["src/styles.css"]
     }
   ],
   "action": {
-    "default_popup": "popup.html",
+    "default_popup": "src/popup.html",
     "default_icon": {
       "16": "icons/icon16.png",
       "48": "icons/icon48.png",
