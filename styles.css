@@ -1,0 +1,100 @@
+/* CodeHub Extension Styles */
+
+.codehub-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+  margin-left: 8px;
+}
+
+.codehub-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.6);
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.codehub-btn:active {
+  transform: translateY(0);
+}
+
+.codehub-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.codehub-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Platform-specific adjustments */
+
+/* LeetCode */
+body[data-new-gr-c-s-check-loaded] .codehub-btn {
+  margin-left: 12px;
+}
+
+/* Codeforces */
+.codeforces .codehub-btn {
+  margin-top: 10px;
+}
+
+/* HackerRank */
+.hackerrank .codehub-btn {
+  position: relative;
+  z-index: 1000;
+}
+
+/* CodeChef */
+.codechef .codehub-btn {
+  margin-top: 8px;
+}
+
+/* Codewars */
+.codewars .codehub-btn {
+  margin-left: 10px;
+}
+
+/* Notification toast */
+.codehub-toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  background: #2d3748;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 10000;
+  animation: slideIn 0.3s ease;
+}
+
+.codehub-toast.success {
+  background: #48bb78;
+}
+
+.codehub-toast.error {
+  background: #f56565;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
